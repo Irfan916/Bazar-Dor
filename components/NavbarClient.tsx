@@ -8,13 +8,13 @@ import { Category } from "@/types";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import PriceTicker from "./PriceTicker";
+import NavbarDate from "./NavbarDate";
 
 interface NavbarClientProps {
-  today: string;
   initialCategories: Category[];
 }
 
-export default function NavbarClient({ today, initialCategories }: NavbarClientProps) {
+export default function NavbarClient({ initialCategories }: NavbarClientProps) {
   const [categories, setCategories] = useState<Category[]>(initialCategories);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -55,9 +55,7 @@ export default function NavbarClient({ today, initialCategories }: NavbarClientP
               <span className="text-base sm:text-xl font-bold text-primary leading-tight">
                 বাজার দর
               </span>
-              <span className="text-[10px] sm:text-xs text-muted leading-tight hidden xs:block">
-                {today}
-              </span>
+              <NavbarDate />
             </div>
           </Link>
 

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import NavbarClient from "./NavbarClient";
 import { getCategories } from "@/lib/api";
 import { Category } from "@/types";
@@ -10,5 +11,11 @@ export default async function Navbar() {
     console.error("Failed to fetch categories in Navbar:", e);
   }
 
-  return <NavbarClient initialCategories={categories} />;
+  return <Suspense
+      fallback={
+        <header className="sticky top-0 z-50 bg-white shadow-sm h-[132px]" />
+      }
+    >
+      <NavbarClient initialCategories={categories}/>
+    </Suspense>
 }

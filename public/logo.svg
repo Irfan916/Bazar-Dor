@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Cart outline -->
+  <path d="M6 10h10l7 34h28l7-26H20" 
+        stroke="#059669" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  <!-- Basket area -->
+  <path d="M20 16 L25 42 L48 42 L53 16 Z" 
+        fill="#059669" 
+        fill-opacity="0.1" 
+        stroke="none"/>
+  <!-- Wheels -->
+  <circle cx="26" cy="54" r="4.5" fill="#059669"/>
+  <circle cx="48" cy="54" r="4.5" fill="#059669"/>
+  <!-- Handle -->
+  <path d="M14 10 L20 10" 
+        stroke="#059669" 
+        stroke-width="4.5" 
+        stroke-linecap="round"/>
+</svg>

@@ -14,6 +14,11 @@ const notoBengali = Noto_Sans_Bengali({
 export const metadata: Metadata = {
   title: "বাজার দর | Bazar Dor",
   description: "প্রয়োজনীয় পণ্যের দাম এক নজরে",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

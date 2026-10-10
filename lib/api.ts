@@ -1,9 +1,10 @@
 import { Category, Product } from "@/types";
 
-const BASE_URL = "https://api.abcz.workers.dev/api/bazardor";
+const BASE_URL_1 = "https://openapi.programming-hero.com/api/bazardor";
+
 
 export async function getCategories(): Promise<Category[]> {
-  const res = await fetch(`${BASE_URL}/categories`, {
+  const res = await fetch(`${BASE_URL_1}/categories`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) throw new Error("Failed to fetch categories");
@@ -11,7 +12,7 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 export async function getProducts(): Promise<Product[]> {
-  const res = await fetch(`${BASE_URL}/products`, {
+  const res = await fetch(`${BASE_URL_1}/products`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) throw new Error("Failed to fetch products");
@@ -21,7 +22,7 @@ export async function getProducts(): Promise<Product[]> {
 export async function getProductsByCategory(
   category: string
 ): Promise<Product[]> {
-  const res = await fetch(`${BASE_URL}/products?category=${category}`, {
+  const res = await fetch(`${BASE_URL_1}/products?category=${category}`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) throw new Error("Failed to fetch products");
@@ -29,7 +30,7 @@ export async function getProductsByCategory(
 }
 
 export async function getProductById(id: string): Promise<Product | null> {
-  const res = await fetch(`${BASE_URL}/products/${id}`, {
+  const res = await fetch(`${BASE_URL_1}/products/${id}`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) return null;
@@ -39,7 +40,7 @@ export async function getProductById(id: string): Promise<Product | null> {
 export async function getCategoryBySlug(
   slug: string
 ): Promise<Category | null> {
-  const res = await fetch(`${BASE_URL}/categories/${slug}`, {
+  const res = await fetch(`${BASE_URL_1}/categories/${slug}`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) return null;

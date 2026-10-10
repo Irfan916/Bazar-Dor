@@ -6,7 +6,7 @@
   --color-danger: #dc2626;
   --color-success: #16a34a;
   --color-muted: #6b7280;
-  --font-sans: var(--font-hind-siliguri), sans-serif;
+  --font-sans: var(--font-noto-bengali), sans-serif;
   --animate-marquee: marquee 25s linear infinite;
   --breakpoint-xs: 30rem;
 

@@ -13,7 +13,7 @@ export default async function Navbar() {
 
   return <Suspense
       fallback={
-        <header className="sticky top-0 z-50 bg-white shadow-sm h-[132px]" />
+        <header className="sticky top-0 z-50 bg-white shadow-sm h-33" />
       }
     >
       <NavbarClient initialCategories={categories}/>

@@ -58,7 +58,6 @@ export default function CategoryPageClient({ slug }: { slug: string }) {
     return 0;
   });
 
-  // Empty / invalid state
   if (!loading && !category) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">

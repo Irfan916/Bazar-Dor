@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "@/lib/api";
 import { Product } from "@/types";
 import { formatPrice, toBengaliNumber } from "@/lib/utils";
+import Link from "next/link";
 
 export default function PriceTicker() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -20,6 +21,10 @@ export default function PriceTicker() {
     <div className="bg-gray-100 border-t border-b border-gray-200 py-1.5 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
         {[...products, ...products].map((p, i) => (
+          <Link
+            key={i}
+            href={`/product/${p.id}`}
+            >
           <span
             key={i}
             className="mx-3 sm:mx-4 text-xs sm:text-sm flex items-center gap-1 shrink-0"
@@ -46,6 +51,7 @@ export default function PriceTicker() {
               {toBengaliNumber(Math.abs(p.change.pct))}%
             </span>
           </span>
+          </Link>
         ))}
       </div>
     </div>
